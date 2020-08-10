@@ -29,12 +29,14 @@ bld/
 
 *.db
 appsettings.json
+[Aa]piTest/appsettings.json
 *.rdb
 settings.json
 publish
 wwwroot
 .idea
 appsettings.Development.json
+[Aa]piTest/appsettings.Development.json
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
