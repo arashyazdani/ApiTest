@@ -26,7 +26,15 @@ bld/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
-ApiTest/appsettings.json
+
+*.db
+appsettings.json
+*.rdb
+settings.json
+publish
+wwwroot
+.idea
+appsettings.Development.json
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
