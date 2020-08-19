@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ApiTest.Dtos;
+﻿using ApiTest.Dtos;
 using AutoMapper;
 using Core.Entities;
 using Microsoft.Extensions.Configuration;
@@ -18,6 +13,7 @@ namespace ApiTest.Helpers
         {
             _config = config;
         }
+
         public string Resolve(Product source, ProductToReturnDto destination, string destMember, ResolutionContext context)
         {
             if (!string.IsNullOrEmpty(source.PictureUrl))

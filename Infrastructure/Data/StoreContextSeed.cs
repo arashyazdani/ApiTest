@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Core.Entities;
+using Microsoft.EntityFrameworkCore.Internal;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.Entities;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.Extensions.Logging;
 using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Data
 {
@@ -28,7 +27,6 @@ namespace Infrastructure.Data
                     }
 
                     await context.SaveChangesAsync();
-
                 }
 
                 if (!context.ProductTypes.Any())
@@ -42,7 +40,6 @@ namespace Infrastructure.Data
                     }
 
                     await context.SaveChangesAsync();
-
                 }
 
                 if (!context.Products.Any())
@@ -56,9 +53,7 @@ namespace Infrastructure.Data
                     }
 
                     await context.SaveChangesAsync();
-
                 }
-
             }
             catch (Exception ex)
             {

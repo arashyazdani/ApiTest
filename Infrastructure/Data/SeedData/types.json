@@ -1,14 +1,14 @@
 [
-  {
-    "Name": "Boards"
-  },
-  {
-    "Name": "Hats"
-  },
-  {
-    "Name": "Boots"
-  },
-  {
-    "Name": "Gloves"
-  }
+	{
+		"Name": "Boards"
+	},
+	{
+		"Name": "Hats"
+	},
+	{
+		"Name": "Boots"
+	},
+	{
+		"Name": "Gloves"
+	}
 ]

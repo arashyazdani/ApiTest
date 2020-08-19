@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using ApiTest.Dtos;
+﻿using ApiTest.Dtos;
 using ApiTest.Errors;
 using ApiTest.Helpers;
 using AutoMapper;
@@ -9,10 +7,11 @@ using Core.Interfaces;
 using Core.Specifications;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ApiTest.Controllers
 {
-    
     public class ProductsController : BaseApiController
     {
         private readonly IGenericRepository<Product> _productsRepository;
@@ -29,7 +28,7 @@ namespace ApiTest.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams productParams)
+        public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery] ProductSpecParams productParams)
         {
             var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
 

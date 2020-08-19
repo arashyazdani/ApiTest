@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ApiTest.Errors
 {
@@ -12,6 +8,6 @@ namespace ApiTest.Errors
         {
         }
 
-        public IEnumerable<string> Errors { get;  set; }
+        public IEnumerable<string> Errors { get; set; }
     }
 }

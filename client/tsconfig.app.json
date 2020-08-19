@@ -8,6 +8,16 @@
   "angularCompilerOptions": {
     "enableIvy": false
   },
+  //***
+  //In your .eslintrc file you can add the following under rules:
+  "plugins": [ "@typescript-eslint" ],
+  "rules": {
+    "...": null,
+    "@typescript-eslint/explicit-function-return-type": {
+      "allowExpressions": true
+    }
+  },
+  //***
   "files": [
     "src/main.ts",
     "src/polyfills.ts"

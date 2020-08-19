@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ApiTest.Errors
+﻿namespace ApiTest.Errors
 {
     public class ApiException : ApiResponse
     {
@@ -12,7 +6,7 @@ namespace ApiTest.Errors
         {
             Details = details;
         }
-        public string Details { get; set; }
 
+        public string Details { get; set; }
     }
 }

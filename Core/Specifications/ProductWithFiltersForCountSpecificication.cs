@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.Entities;
+﻿using Core.Entities;
 
 namespace Core.Specifications
 {
@@ -16,7 +11,6 @@ namespace Core.Specifications
                 (!productParams.TypeId.HasValue || x.ProductTypeId == productParams.TypeId)
         )
         {
-            
         }
     }
 }
