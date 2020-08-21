@@ -30,7 +30,7 @@ namespace ApiTest
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => x.UseSqlServer(_config.GetConnectionString("DefaultConnection")));
 
-            services.AddSingleton<ConnectionMultiplexer>(c =>
+            services.AddSingleton<IConnectionMultiplexer>(c =>
             {
                 var configuration = ConfigurationOptions.Parse(_config.GetConnectionString("Redis"), true);
                 return ConnectionMultiplexer.Connect(configuration);
