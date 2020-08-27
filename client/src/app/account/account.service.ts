@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
 import { IUser } from '../shared/models/user';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
+//import { String, StringBuilder } from 'string_decoder';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,10 @@ export class AccountService {
 
   loadCurrentUser(token: string) {
     let headers = new HttpHeaders();
-    headers = headers.set('Authorization', 'Bearer ${token}');
+
+    //headers = headers.set('Authorization', 'Bearer ${token}');
+    //headers = headers.set('Authorization', String.Format('Bearer {token}', token));
+    headers = headers.set('Authorization', 'Bearer ' + token);
 
     return this.http.get(this.baseUrl + 'account', { headers }).pipe(map((user: IUser) => {
       if (user) {
@@ -54,7 +58,7 @@ export class AccountService {
   }
 
   logout() {
-    localStorage.removeItem('');
+    localStorage.removeItem('token');
     this.currentUserSource.next(null);
     this.router.navigateByUrl('/');
   }
